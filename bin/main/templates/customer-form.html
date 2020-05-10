@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Save Customer</title>
+
+    <link th:href="@{/styles/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/styles/add-customer-style.css}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>CRM - Customer Relationship Manager</h2>
+        </div>
+    </div>
+
+    <div id="container">
+        <h3>Save Customer</h3>
+        <form action="saveCustomer" th:object="${customer}" method="POST">
+
+            <input type="hidden" th:field="*{id}">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>First name:</label>
+                        </td>
+                        <td>
+                            <input type="text" th:field="*{firstName}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Last name:</label>
+                        </td>
+                        <td>
+                            <input type="text" th:field="*{lastName}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Email:</label>
+                        </td>
+                        <td>
+                            <input type="text" th:field="*{email}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label></label>
+                        </td>
+                        <td>
+                            <input type="submit" value="Save" class="save" />
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div>
+        <a href="list">Back to list</a>
+    </div>
+</body>
+
+</html>
