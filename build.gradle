@@ -36,6 +36,8 @@ dependencies {
     compile 'com.microsoft.sqlserver:mssql-jdbc'
     compile "org.apache.commons:commons-dbcp2"
     compile "org.apache.commons:commons-pool2"
+
+    compile 'org.aspectj:aspectjweaver'
 }
 
 test {
